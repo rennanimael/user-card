@@ -216,7 +216,7 @@ function App() {
           <span className="nu">{user.shares}k</span>
         </div>
       </div>
-    </div>))}                  
+    </div>))}   
     </div>
   )
 }
