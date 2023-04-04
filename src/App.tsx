@@ -206,7 +206,7 @@ function App() {
         <div className="data">
           <i className="bx bx-heart"></i>
           <span className="nu">{user.likes}k</span>
-        </div>
+git        </div>
         <div className="data">
           <i className="bx bx-message-rounded"></i>
           <span className="nu">{user.messages}k</span>
