@@ -1,4 +1,5 @@
-import './styles.css'
+import './styles.css';
+import Increment from '../Increment/index'
 
 export default function Card({ user }){
   return (<div className='profile-card'>
@@ -49,5 +50,6 @@ export default function Card({ user }){
           <span className="nu">{user.shares}k</span>
         </div>
       </div>
+      <Increment />
     </div>)       
 }
