@@ -1,5 +1,6 @@
 import './styles.css';
 import Increment from '../Increment/index'
+import Reaction from '../Reaction';
 
 export default function Card({ user }){
   return (<div className='profile-card'>
@@ -39,8 +40,8 @@ export default function Card({ user }){
       <div className="analytics">
         <div className="data">
           <i className="bx bx-heart"></i>
-          <span className="nu">{user.likes}k</span>
-        </div>
+          <span className="nu">{user.likes}k</span>        
+        </div>      
         <div className="data">
           <i className="bx bx-message-rounded"></i>
           <span className="nu">{user.messages}k</span>
@@ -50,6 +51,16 @@ export default function Card({ user }){
           <span className="nu">{user.shares}k</span>
         </div>
       </div>
-      <Increment />
+      <div className="analytics">
+          <Reaction
+          icon={<i className="bx bx-heart"></i>}
+          counter={user.likes} />
+           <Reaction
+          icon={<i className="bx bx-message-rounded"></i>}
+          counter={user.messages} />
+           <Reaction
+          icon={<i className="bx bx-share"></i>}
+          counter={user.shares} />
+      </div>      
     </div>)       
 }
