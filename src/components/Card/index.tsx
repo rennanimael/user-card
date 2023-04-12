@@ -37,20 +37,7 @@ export default function Card({ user }){
         <button className="button">Peso {user.peso}kg</button>
         <button className="button">IMC {user.imc}</button>
       </div>
-      <div className="analytics">
-        <div className="data">
-          <i className="bx bx-heart"></i>
-          <span className="nu">{user.likes}k</span>        
-        </div>      
-        <div className="data">
-          <i className="bx bx-message-rounded"></i>
-          <span className="nu">{user.messages}k</span>
-        </div>
-        <div className="data">
-          <i className="bx bx-share"></i>
-          <span className="nu">{user.shares}k</span>
-        </div>
-      </div>
+     
       <div className="analytics">
           <Reaction
           icon={<i className="bx bx-heart"></i>}
