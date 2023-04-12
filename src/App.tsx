@@ -1,6 +1,7 @@
-import { useState } from 'react';
-import './App.css'
+import { useEffect, useState } from 'react';
+import './App.css';
 import Card from './components/Card';
+import api from './services/api';
 
 function App() {
   
@@ -166,10 +167,15 @@ function App() {
       peso: 69
     },
   ]);
+  useEffect(
+    ()=> {
+      return () => api.get('/users').then(resposta => setUsers(resposta.data))
+    }, []
+  )
   return (
     <div className="App">
         {users.map(user => (<Card user={user}/>))}
-
+       
 
         </div>)
 }
